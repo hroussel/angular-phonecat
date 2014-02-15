@@ -57,9 +57,11 @@ describe('PhoneCat App', function() {
       browser().navigateTo('app/index.html#/phones/nexus-s');
     });
 
-
     it('should display nexus-s page', function() {
       expect(binding('phone.name')).toBe('Nexus S');
+      //expect(binding('phone.images').length).toBe(4);
+      expect(repeater('.phone-thumbs li').count()).toBe(4);
+      //console.log(binding('phone.images'));
     });
   });
 });
