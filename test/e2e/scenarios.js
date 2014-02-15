@@ -59,7 +59,7 @@ describe('PhoneCat App', function() {
 
 
     it('should display placeholder page with phoneId', function() {
-      expect(binding('phoneId')).toBe('nexus-s');
+      expect(binding('phoneId2')).toBe('nexus-s');
     });
   });
 });

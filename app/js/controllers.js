@@ -15,5 +15,5 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
 
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
   function($scope, $routeParams) {
-    $scope.phoneId = $routeParams.phoneId;
+    $scope.phoneId2 = $routeParams.phoneId2;
   }]);
