@@ -103,7 +103,9 @@
       <dt>Primary</dt>
       <dd>{{phone.camera.primary}}</dd>
       <dt>Features</dt>
-      <dd>{{phone.camera.features.join(', ')}}</dd>
+      <dd>{{phone.camera.features.join(', ') | uppercase  }}</dd>
+      <dd>{{ 1385981964000 | date:"MMM, dd yyyy @ HH:mm" }}</dd>
+
     </dl>
   </li>
   <li>
