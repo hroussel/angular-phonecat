@@ -19,7 +19,7 @@ describe('PhoneCat controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('phones/phones.json').
+      $httpBackend.expectGET('phones/phones2.json').
           respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 
       scope = $rootScope.$new();
@@ -33,6 +33,7 @@ describe('PhoneCat controllers', function() {
 
       expect(scope.phones).toEqualData(
           [{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
+      expect(scope.phones.length).toBe(2);
     });
 
 
