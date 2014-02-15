@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="phonecatApp" ng-controller="PhoneListCtrl">
 <head>
   <meta charset="utf-8">
-  <title>Google Phone Gallery</title>
+  <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="lib/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="PhoneListCtrl">
+<body >
 
   <div class="container-fluid">
     <div class="row-fluid">
@@ -17,10 +17,11 @@
 
         Search: <input ng-model="query">
 
+
       </div>
       <div class="span10">
         <!--Body content-->
-
+		<p><span id="status">Current filter: {{query}}</span></p>
         <ul class="phones">
           <li ng-repeat="phone in phones | filter:query">
             {{phone.name}}
